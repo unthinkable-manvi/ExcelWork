@@ -77,7 +77,7 @@ public class EmployeeExcelExporter {
           int rowCount=2;
           CellStyle style=workbook.createCellStyle();
           XSSFFont font=workbook.createFont();
-          font.setFontHeight(14);
+          font.setFontHeight(12);
           style.setFont(font);
 
           for (Employee emp:employeeList){

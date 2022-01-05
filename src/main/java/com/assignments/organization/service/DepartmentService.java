@@ -17,15 +17,17 @@ public class DepartmentService {
 	@Autowired
 	private DepartmentRepository departmentRepository;
 
-
+      //Get all Department
 	public List<Department> getAllDepartment() {
 		return  departmentRepository.findAll();
 	}
 
+	//add Department
 	public Department addDepartment(Department department) {
 		return departmentRepository.save(department);
 	}
 
+	//update Department
 	public Department updateDepartment(Long deptId, Department department) {
 		return departmentRepository.findById(deptId).map(dept->{
             dept.setDeptName(department.getDeptName());			
